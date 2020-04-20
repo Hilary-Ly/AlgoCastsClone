@@ -6,7 +6,7 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// sol 1
+// sol 1 - incrementing for loop
 // function reverse(str) {
 //     let reversedStr = ''
 //     for (let i = 0; i < str.length; i++) {
@@ -15,7 +15,7 @@
 //     return reversedStr
 // }
 
-// sol 2
+// sol 2 - decrementing for loop
 // function reverse(str) {
 //     let reversedStr = ''
 //     for (let i = str.length - 1; i >= 0; i--) {
@@ -33,7 +33,7 @@ function reverse(str) {
    return reversed;
 }
 
-// sol 4
+// sol 4 - array methods
 // function reverse(str) {
 //    return str.split('').reverse().join('')
 // }

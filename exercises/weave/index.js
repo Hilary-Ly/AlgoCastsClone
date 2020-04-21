@@ -24,6 +24,16 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+    console.log(sourceOne, sourceTwo)
+    const q = new Queue()
+    while (sourceOne.peek() || sourceTwo.peek()) {
+        // while runs until both run out
+        if (sourceOne.peek()) q.add(sourceOne.remove())
+        if (sourceTwo.peek()) q.add(sourceTwo.remove())
+        // these two lines create the alternating pattern but only until one runs out
+    }
+    return q
+}
 
 module.exports = weave;

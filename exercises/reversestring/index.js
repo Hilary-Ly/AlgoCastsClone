@@ -24,7 +24,7 @@
 //     return reversedStr
 // }
 
-// sol 3 - with for-of loops!
+// sol 3 - with for-of loops! | O(n) time
 function reverse(str) {
    let reversed = '';
    for (let character of str) {

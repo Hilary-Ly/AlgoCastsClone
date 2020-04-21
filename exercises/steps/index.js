@@ -31,7 +31,7 @@
 // //     }
 // // }
 
-// /* sol 2 - nested for loops for row and col (or row data) */
+// /* sol 2 - nested for loops for row and col (or row data) | O(n^2) time */
 // function steps(n) {
 //     for (let row = 0; row < n; row++) {
 //         let currStep = ''

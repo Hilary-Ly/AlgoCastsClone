@@ -40,24 +40,19 @@
 //   1: 1
 // };
 // function fib (n) {
-//   if (cache.hasOwnProperty(n)) {
-//     return cache[n];
-//   }
+//   if (cache.hasOwnProperty(n)) return cache[n];
 //   return cache[n] = fib(n - 1) + fib(n - 2);
 // }
 
 /* memoization sol w/ cache as an arg */
 function fib(n, cache = { 0: 0, 1: 1 }) {
-   if (cache.hasOwnProperty(n)) { // 'if (cache[n])' doesn't work
-      return cache[n];
-   }
+   if (cache.hasOwnProperty(n)) return cache[n] // '(cache[n])' doesn't work
    return cache[n] = fib(n - 1, cache) + fib(n - 2, cache);
 }
 
 /* memoization sol w/ additonal memoize function */
 /* aka "how can we improve the runtime of this recursive fn" */
-// function slowFib(n) {
-//    // same recursive function, renamed
+// function slowFib(n) { // same recursive function, renamed
 //    if (n <= 1) return n;
 //    return fib(n - 1) + fib(n - 2); // refers to the memoized fib
 // }

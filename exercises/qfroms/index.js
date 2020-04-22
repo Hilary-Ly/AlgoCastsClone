@@ -26,11 +26,11 @@ class Queue {
         this.first.push(record)
     }
     remove() { // want to remove the first item, so we take everything out one-by-one so that it becomes the last item in the second stack
-        while (this.first.peek()) {
+        while (this.first.peek()) { // take everything out
             this.second.push(this.first.pop())
-        } // now everything is in this.second
-        const removed = this.second.pop()
-        while (this.second.peek()) {
+        }
+        const removed = this.second.pop() // the one we want is now last
+        while (this.second.peek()) { // put the rest back in
             this.first.push(this.second.pop())
         }
         return removed

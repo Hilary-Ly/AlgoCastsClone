@@ -11,6 +11,17 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
-function fromLast(list, n) {}
+function fromLast(list, n) {
+    let pointer = list.head // n spaces away from B
+    let pointerN = list.head // move toward last
+    for (let i = 0; i < n; i++) {
+        pointerN = pointerN.next
+    }
+    while (pointerN.next) {
+        pointer = pointer.next
+        pointerN = pointerN.next
+    }
+    return pointer
+}
 
 module.exports = fromLast;

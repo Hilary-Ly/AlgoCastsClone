@@ -10,8 +10,49 @@
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
 
-class Node {}
+class Node {
+    // manipulation of tree happens at the node in a tree (vs the linked list)
+    constructor(data) {
+        this.data = data
+        this.children = []
+    }
+    add(data) {
+        const newNode = new Node(data)
+        this.children.push(newNode);
+    }
+    remove(data) {
+        this.children = this.children.filter((child) => child.data !== data)
+        // this.children = this.children.filter(child => {
+        //     if (child.data !== data) return child
+        // })
+    }
+}
 
-class Tree {}
+class Tree {
+    constructor() {
+        this.root = null
+    }
+    traverseBF(fn) {
+        const arr = [this.root] 
+        // create an array to store nodes temporarily until we invoke the callback function on it
+        while (arr.length) { // rather than (arr.length > 0)
+            const node = arr.shift()
+            arr.push(...node.children) // ok if no children also
+            fn(node)
+        }
+    }
+    traverseDF(fn) { // same as BF except one thing
+        const arr = [this.root]
+        while (arr.length) {
+            const node = arr.shift()
+            arr.unshift(...node.children) // put in the beginning!
+            fn(node)
+        }
+    }
+}
+
+// const node = new Node(1)
+// const tree = new Tree()
+// tree.root = node
 
 module.exports = { Tree, Node };

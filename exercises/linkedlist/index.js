@@ -16,7 +16,7 @@ class LinkedList {
    } // head is the only info a linked list has, any other information would require traversing the nodes
 
    insertFirst(data) {
-      const newNext = this.head; // could be null which is ok
+      const newNext = this.head; // could be null if no head yet
       const newHead = new Node(data, newNext);
       this.head = newHead;
    }
@@ -43,7 +43,7 @@ class LinkedList {
       // if (!this.head) return null
       // let curr = this.head;
       // while (curr.next) curr = curr.next;
-      // return curr;
+    //   return curr;
    }
    clear() {
       // all created nodes now essentially invisible

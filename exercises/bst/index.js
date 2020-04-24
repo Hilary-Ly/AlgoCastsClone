@@ -17,10 +17,10 @@ class Node {
         this.left = null
         this.right = null
     }
-    
+
     insert(data) {
-    // - current node already assigned to left and right
-    // - reached the bottom of the tree (node is not defined)
+        // 1,3: current node already assigned to left / right
+        // 2,4: reached the bottom of the tree (node is not defined)
         if (data < this.data && this.left) this.left.insert(data)
         else if (data < this.data) this.left = new Node(data)
         if (data > this.data && this.right) this.right.insert(data)
@@ -34,6 +34,6 @@ class Node {
         return null
     }
 
-}
+} // no tree class needed. but this means most BST operations are recursive
 
 module.exports = Node;

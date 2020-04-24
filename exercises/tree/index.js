@@ -34,7 +34,7 @@ class Tree {
     }
     traverseBF(fn) {
         const arr = [this.root] 
-        // create an array to store nodes temporarily until we invoke the callback function on it
+        // create a holding array to store nodes temporarily until we invoke the callback function on it
         while (arr.length) { // rather than (arr.length > 0)
             const node = arr.shift()
             arr.push(...node.children) // ok if no children also
@@ -45,7 +45,7 @@ class Tree {
         const arr = [this.root]
         while (arr.length) {
             const node = arr.shift()
-            arr.unshift(...node.children) // put in the beginning!
+            arr.unshift(...node.children) // put children in the beginning!
             fn(node)
         }
     }

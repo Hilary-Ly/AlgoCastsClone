@@ -15,6 +15,8 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
+// great strategy for NxN but not NxM
+
 function matrix(n) {
     let results = []
     for (let i = 0; i < n; i++) { // create empty matrix first!

@@ -40,7 +40,7 @@ function mergeSort(arr) {
     // keep calling mergeSort until arr.length is 1, then call merge
 }
 
-function merge(left, right) {
+function merge(left, right) { // merges two SORTED arrays
     const results = []
     let lesser
     while (left.length && right.length) {

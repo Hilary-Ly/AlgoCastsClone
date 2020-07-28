@@ -48,3 +48,27 @@ class Queue {
 }
 
 module.exports = Queue;
+
+
+// from interview cake
+// class QueueTwoStacks {
+//    constructor() {
+//       this.instack = [];
+//       this.outstack = [];
+//    }
+
+//    enqueue(item) {
+//       this.instack.push(item);
+//    }
+
+//    dequeue() {
+//       if (this.outstack.length === 0) {
+//          while (this.instack.length) {
+//             let item = this.instack.pop();
+//             this.outstack.push(item);
+//          }
+//          if (!this.outstack.length) throw new Error();
+//       }
+//       return this.outstack.pop();
+//    }
+// }
